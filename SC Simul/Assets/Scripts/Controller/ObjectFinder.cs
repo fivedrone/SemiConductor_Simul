@@ -10,7 +10,7 @@ public class ObjectFinder : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Interaction"))
         {
             if (Physics.Raycast(getCamera.transform.position, getCamera.transform.forward, out hit, 1000))
             {

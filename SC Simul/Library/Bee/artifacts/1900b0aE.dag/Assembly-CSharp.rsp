@@ -365,6 +365,7 @@
 "Assets/Scripts/Controller/MouseMove.cs"
 "Assets/Scripts/Controller/ObjectFinder.cs"
 "Assets/Scripts/Manager/GameManager.cs"
+"Assets/Scripts/Manager/Quest_Manager.cs"
 "Assets/Scripts/Manager/UI_Manager.cs"
 -langversion:9.0
 
