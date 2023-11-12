@@ -364,6 +364,8 @@
 "Assets/Scripts/Controller/CharacterMove.cs"
 "Assets/Scripts/Controller/MouseMove.cs"
 "Assets/Scripts/Controller/ObjectFinder.cs"
+"Assets/Scripts/Furniture/Door.cs"
+"Assets/Scripts/Furniture/Interaction.cs"
 "Assets/Scripts/Manager/GameManager.cs"
 "Assets/Scripts/Manager/Quest_Manager.cs"
 "Assets/Scripts/Manager/UI_Manager.cs"

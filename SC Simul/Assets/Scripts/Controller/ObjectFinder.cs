@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Furniture;
 using UnityEngine;
 
 public class ObjectFinder : MonoBehaviour
@@ -12,12 +13,22 @@ public class ObjectFinder : MonoBehaviour
     {
         if (Input.GetButtonDown("Interaction"))
         {
-            if (Physics.Raycast(getCamera.transform.position, getCamera.transform.forward, out hit, 1000))
-            {
-                GameObject objectName = hit.collider.gameObject;
+            TryInteract();
+        }
+    }
 
-                Debug.Log(objectName.name);
-                Debug.DrawRay(getCamera.transform.position, getCamera.transform.forward * hit.distance, Color.red, 10.0f);
+    void TryInteract()
+    {
+        if (Physics.Raycast(getCamera.transform.position, getCamera.transform.forward, out hit, 1000))
+        {
+            Debug.DrawRay(getCamera.transform.position, getCamera.transform.forward * hit.distance, Color.red, 10.0f);
+
+            Debug.Log(hit.collider.gameObject.name);
+            // IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+            if (interactable != null)
+            {
+                interactable.Interact();
             }
         }
     }
