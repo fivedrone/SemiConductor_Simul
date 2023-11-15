@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
+    public Text ErrorText;
     public void Button_FromBeginning()
     {
         // PlayerPrefs로 어디서 시작하는지 변수 설정해줄 것.
@@ -31,5 +33,18 @@ public class UI_Manager : MonoBehaviour
     {
         // 종료
         Application.Quit();
+    }
+
+    public void GetError(string error)
+    {
+        ErrorText.text = error;
+        ErrorText.gameObject.SetActive(true);
+
+    }
+    
+    IEnumerator WaitClose()
+    {
+        yield return new WaitForSeconds(2.0f);
+        ErrorText.gameObject.SetActive(false);
     }
 }

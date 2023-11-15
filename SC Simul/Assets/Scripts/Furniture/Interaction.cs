@@ -10,5 +10,6 @@ namespace Furniture
     interface IInteractable
     {
         void Interact();
+        string InteractText();
     }
 }
