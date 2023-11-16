@@ -19,6 +19,7 @@ public class AS_Switch : MonoBehaviour, IInteractable
         foreach (AS air in arr_AS)
         {
             air.GetWashPlace().Stop();
+            Debug.Log("작동 중..");
         }
         
         Debug.Log("AS 재생 종료, 문 잠금 해제.");

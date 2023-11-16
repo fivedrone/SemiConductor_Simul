@@ -6,6 +6,8 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     private Animator doorAnim;
+    private AudioSource doorSound;
+    public AudioClip[] soundArr;
     public GameObject UImanager;
 
     private bool IsLock;
@@ -16,6 +18,7 @@ public class Door : MonoBehaviour, IInteractable
     void Awake()
     {
         doorAnim = GetComponent<Animator>();
+        doorSound = GetComponent<AudioSource>();
     }
 
     public void SetLock()
@@ -33,9 +36,7 @@ public class Door : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(4.0f);
         if (IsDoorOpen == true)
         {
-            IsDoorOpen = !IsDoorOpen;
-            inter_Text = "E를 눌러 열기";
-            doorAnim.SetBool("IsOpen", IsDoorOpen);
+            Close();
         }
     }
 
@@ -44,23 +45,41 @@ public class Door : MonoBehaviour, IInteractable
         if (IsLock)
         {
             UImanager.GetComponent<UI_Manager>().GetError("감압을 먼저 해주세요.");
+            doorSound.clip = soundArr[2];
+            doorSound.Play();
             return;
         }
-        IsDoorOpen = !IsDoorOpen;
-        if (IsDoorOpen)
+        if (!IsDoorOpen)
         {
-            inter_Text = "E를 눌러 닫기";
+            Open();
         }
         else
         {
-            inter_Text = "E를 눌러 열기";
+            Close();
         }
-        doorAnim.SetBool("IsOpen", IsDoorOpen);
-        StartCoroutine(WaitClose());
     }
 
     public string InteractText()
     {
         return inter_Text;
+    }
+
+    public void Open()
+    {
+        IsDoorOpen = !IsDoorOpen;
+        inter_Text = "E를 눌러 닫기";
+        doorAnim.SetBool("IsOpen", IsDoorOpen);
+        doorSound.clip = soundArr[0];
+        doorSound.Play();
+        StartCoroutine(WaitClose());
+    }
+
+    public void Close()
+    {
+        IsDoorOpen = !IsDoorOpen;
+        inter_Text = "E를 눌러 열기";
+        doorAnim.SetBool("IsOpen", IsDoorOpen);
+        doorSound.clip = soundArr[1];
+        doorSound.Play();
     }
 }
