@@ -6,16 +6,19 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     private Animator doorAnim;
+    private AudioSource doorSound;
+    public AudioClip[] soundArr;
     public GameObject UImanager;
 
     private bool IsLock;
-    private string inter_Text = "EÎ•º ÎàåÎü¨ Ïó¥Í∏∞";
+    private string inter_Text = "E∏¶ ¥≠∑Ø ø≠±‚";
     private bool IsDoorOpen = false;
-    
+
     // Start is called before the first frame update
     void Awake()
     {
         doorAnim = GetComponent<Animator>();
+        doorSound = GetComponent<AudioSource>();
     }
 
     public void SetLock()
@@ -33,9 +36,7 @@ public class Door : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(4.0f);
         if (IsDoorOpen == true)
         {
-            IsDoorOpen = !IsDoorOpen;
-            inter_Text = "EÎ•º ÎàåÎü¨ Ïó¥Í∏∞";
-            doorAnim.SetBool("IsOpen", IsDoorOpen);
+            Close();
         }
     }
 
@@ -43,24 +44,42 @@ public class Door : MonoBehaviour, IInteractable
     {
         if (IsLock)
         {
-            UImanager.GetComponent<UI_Manager>().GetError("Í∞êÏïïÏùÑ Î®ºÏ†Ä Ìï¥Ï£ºÏÑ∏Ïöî.");
+            UImanager.GetComponent<UI_Manager>().GetError("∞®æ–¿ª ∏’¿˙ «ÿ¡÷ººø‰.");
+            doorSound.clip = soundArr[2];
+            doorSound.Play();
             return;
         }
-        IsDoorOpen = !IsDoorOpen;
-        if (IsDoorOpen)
+        if (!IsDoorOpen)
         {
-            inter_Text = "EÎ•º ÎàåÎü¨ Îã´Í∏∞";
+            Open();
         }
         else
         {
-            inter_Text = "EÎ•º ÎàåÎü¨ Ïó¥Í∏∞";
+            Close();
         }
-        doorAnim.SetBool("IsOpen", IsDoorOpen);
-        StartCoroutine(WaitClose());
     }
 
     public string InteractText()
     {
         return inter_Text;
+    }
+
+    public void Open()
+    {
+        IsDoorOpen = !IsDoorOpen;
+        inter_Text = "E∏¶ ¥≠∑Ø ¥›±‚";
+        doorAnim.SetBool("IsOpen", IsDoorOpen);
+        doorSound.clip = soundArr[0];
+        doorSound.Play();
+        StartCoroutine(WaitClose());
+    }
+
+    public void Close()
+    {
+        IsDoorOpen = !IsDoorOpen;
+        inter_Text = "E∏¶ ¥≠∑Ø ø≠±‚";
+        doorAnim.SetBool("IsOpen", IsDoorOpen);
+        doorSound.clip = soundArr[1];
+        doorSound.Play();
     }
 }

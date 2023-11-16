@@ -10,7 +10,7 @@ public class UI_Manager : MonoBehaviour
     public void Button_FromBeginning()
     {
         // PlayerPrefs로 어디서 시작하는지 변수 설정해줄 것.
-        
+
         SceneManager.LoadScene("GameScene");
     }
     public void Button_FromSave()
@@ -41,7 +41,7 @@ public class UI_Manager : MonoBehaviour
         ErrorText.gameObject.SetActive(true);
 
     }
-    
+
     IEnumerator WaitClose()
     {
         yield return new WaitForSeconds(2.0f);
