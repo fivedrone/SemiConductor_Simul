@@ -364,6 +364,8 @@
 "Assets/Scripts/Controller/CharacterMove.cs"
 "Assets/Scripts/Controller/MouseMove.cs"
 "Assets/Scripts/Controller/ObjectFinder.cs"
+"Assets/Scripts/Equip/ButtonInteraction.cs"
+"Assets/Scripts/Equip/PannelColorChange.cs"
 "Assets/Scripts/Furniture/AS.cs"
 "Assets/Scripts/Furniture/AS_Switch.cs"
 "Assets/Scripts/Furniture/Door.cs"
