@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Furniture;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
     private Animator doorAnim;
-    private AudioSource doorSound;
-    public AudioClip[] soundArr;
-    public GameObject UImanager;
+    // private AudioSource doorSound;
+    // public AudioClip[] soundArr;
+    private UI_Manager UIManager;
 
     private bool IsLock;
     private string inter_Text = "E를 눌러 열기";
@@ -17,8 +16,9 @@ public class Door : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Awake()
     {
+        UIManager = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         doorAnim = GetComponent<Animator>();
-        doorSound = GetComponent<AudioSource>();
+        // doorSound = GetComponent<AudioSource>();
     }
 
     public void SetLock()
@@ -40,13 +40,13 @@ public class Door : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact()
+    public void Interact(int stage, int level)
     {
         if (IsLock)
         {
-            UImanager.GetComponent<UI_Manager>().GetError("감압을 먼저 해주세요.");
-            doorSound.clip = soundArr[2];
-            doorSound.Play();
+            UIManager.GetError("감압을 먼저 해주세요.");
+            // doorSound.clip = soundArr[2];
+            // doorSound.Play();
             return;
         }
         if (!IsDoorOpen)
@@ -69,8 +69,8 @@ public class Door : MonoBehaviour, IInteractable
         IsDoorOpen = !IsDoorOpen;
         inter_Text = "E를 눌러 닫기";
         doorAnim.SetBool("IsOpen", IsDoorOpen);
-        doorSound.clip = soundArr[0];
-        doorSound.Play();
+        // doorSound.clip = soundArr[0];
+        // doorSound.Play();
         StartCoroutine(WaitClose());
     }
 
@@ -79,7 +79,7 @@ public class Door : MonoBehaviour, IInteractable
         IsDoorOpen = !IsDoorOpen;
         inter_Text = "E를 눌러 열기";
         doorAnim.SetBool("IsOpen", IsDoorOpen);
-        doorSound.clip = soundArr[1];
-        doorSound.Play();
+        // doorSound.clip = soundArr[1];
+        // doorSound.Play();
     }
 }

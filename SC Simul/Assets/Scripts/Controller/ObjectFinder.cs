@@ -1,35 +1,54 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Furniture;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectFinder : MonoBehaviour
 {
     public Camera getCamera;
+    private RaycastHit _hit;
+    public Text howInteract;
+    private Quest_Manager _questManager;
 
-    private RaycastHit hit;
+    private void Awake()
+    {
+        _questManager = GetComponent<Quest_Manager>();
+    }
 
     void Update()
     {
+        if (Physics.Raycast(getCamera.transform.position, getCamera.transform.forward, out _hit, 3))
+        {
+            IInteractable interactable = _hit.collider.GetComponentInParent<IInteractable>();
+            if (interactable != null)
+            {
+                howInteract.text = interactable.InteractText();
+            }
+            else
+            {
+                howInteract.text = "";
+            }
+        }
+        
+        
         if (Input.GetButtonDown("Interaction"))
         {
-            TryInteract();
+            Debug.DrawRay(getCamera.transform.position, getCamera.transform.forward * _hit.distance, Color.red, 5.0f);
+            TryInteract(_hit);
         }
     }
 
-    void TryInteract()
+    void TryInteract(RaycastHit _rhit)   
     {
-        if (Physics.Raycast(getCamera.transform.position, getCamera.transform.forward, out hit, 1000))
+        IInteractable interactable = _rhit.collider.GetComponentInParent<IInteractable>();
+        // Debug.Log(_rhit.collider.gameObject.name);
+        // Debug.Log("2");
+        if (interactable != null)
         {
-            Debug.DrawRay(getCamera.transform.position, getCamera.transform.forward * hit.distance, Color.red, 10.0f);
-
-            Debug.Log(hit.collider.gameObject.name);
-            // IInteractable interactable = hit.collider.GetComponent<IInteractable>();
-            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
-            if (interactable != null)
-            {
-                interactable.Interact();
-            }
+            // Debug.Log(_questManager.Stage);
+            // Debug.Log(_questManager.Level);
+            interactable.Interact(_questManager.Stage, _questManager.Level);
         }
     }
 }
