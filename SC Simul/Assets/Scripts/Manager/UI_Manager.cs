@@ -10,16 +10,19 @@ public class UI_Manager : MonoBehaviour
     public void Button_FromBeginning()
     {
         // PlayerPrefs로 어디서 시작하는지 변수 설정해줄 것.
-        
+        PlayerPrefs.SetInt("Stage", 0);
+        PlayerPrefs.SetInt("Level", 0);
         SceneManager.LoadScene("GameScene");
     }
-    public void Button_FromSave()
-    {
-        // 게임을 종료한 시점을 자동 저장, 그리고 이 버튼 눌렀을 때 그 곳에서 시작하게 하기
-    }
+    // public void Button_FromSave()
+    // {
+    //     // 게임을 종료한 시점을 자동 저장, 그리고 이 버튼 눌렀을 때 그 곳에서 시작하게 하기
+    //     // 구현 시간 없음
+    // }
     public void Button_FromChapter()
     {
         // 대충 어느 시점부터 게임 시작할건지 결정하게 하기
+        // 구현 쉬움
     }
     public void Button_Option()
     {

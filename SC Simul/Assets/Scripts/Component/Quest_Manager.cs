@@ -58,6 +58,7 @@ public class Quest_Manager : MonoBehaviour
         if (_markerManager._markerInstance != null)
         {
             _markerManager.UpdateMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
+            Debug.Log("MarkerUpdate");
         }
     }
     
