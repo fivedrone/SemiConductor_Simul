@@ -21,7 +21,7 @@ public class Equipment : MonoBehaviour, IInteractable
         UIManager = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         // equipSound = GetComponent<AudioSource>();
     }
-    public void Interact(int pStage, int pLevel)
+    public void Interact(int pStage, int pLevel, QuestState questState)
     {
         Debug.Log("Equipment Interact");
         if (isActivated)
@@ -37,9 +37,11 @@ public class Equipment : MonoBehaviour, IInteractable
             return;
         }
         
-        // equipAnim.SetBool("isActivated", true);
+        equipAnim.SetBool("isActivated", true);
         Debug.Log(interact_Text);
         isActivated = true;
+        
+        
     }
     
     public string InteractText()

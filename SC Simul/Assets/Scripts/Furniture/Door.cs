@@ -40,7 +40,7 @@ public class Door : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact(int stage, int level)
+    public void Interact(int stage, int level, QuestState questState)
     {
         if (IsLock)
         {
