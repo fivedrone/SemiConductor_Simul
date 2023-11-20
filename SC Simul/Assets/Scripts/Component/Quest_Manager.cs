@@ -55,11 +55,11 @@ public class Quest_Manager : MonoBehaviour
             UpdateQuestUI();
         }
 
-        if (_markerManager._markerInstance != null)
-        {
-            _markerManager.UpdateMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
-            Debug.Log("MarkerUpdate");
-        }
+        // if (_markerManager._markerInstance != null)
+        // {
+        //     _markerManager.UpdateMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
+        //     Debug.Log("MarkerUpdate");
+        // }
     }
     
     void UpdateQuestUI()
@@ -67,14 +67,14 @@ public class Quest_Manager : MonoBehaviour
         Stage_UI.text = QuestArr[Stage].name;
         currentLevel_UI.text = QuestArr[Stage].stageArr[Level].name;
         questState = QuestArr[Stage].stageArr[Level]._questState;
-        MarkQuestLocation();
+        // MarkQuestLocation();
         //  마지막에 여유 되면 prev next도 구현
     }
     
     void MarkQuestLocation()
     {
-        _markerManager.DestroyMarker();
-        _markerManager.MakeMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
+        // _markerManager.DestroyMarker();
+        // _markerManager.MakeMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
     }
 }
 
