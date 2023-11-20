@@ -1,0 +1,376 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.8f1 (b5eafc012955) revision 11922172'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 8023 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker11
+-projectPath
+C:/Users/admin/Documents/GitHub/SemiConductor_Simul/SC Simul
+-logFile
+Logs/AssetImportWorker11.log
+-srvPort
+61096
+Successfully changed project path to: C:/Users/admin/Documents/GitHub/SemiConductor_Simul/SC Simul
+C:/Users/admin/Documents/GitHub/SemiConductor_Simul/SC Simul
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16108] Host "[IP] 220.66.157.138 [Port] 0 [Flags] 2 [Guid] 3225336409 [EditorId] 3225336409 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-PHO3N9G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16108] Host "[IP] 220.66.157.138 [Port] 0 [Flags] 2 [Guid] 3225336409 [EditorId] 3225336409 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-PHO3N9G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 13.60 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.8f1 (b5eafc012955)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/admin/Documents/GitHub/SemiConductor_Simul/SC Simul/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x9bc8)
+    Vendor:   Intel
+    VRAM:     4011 MB
+    Driver:   30.0.101.1994
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56352
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.014021 seconds.
+- Loaded All Assemblies, in  0.747 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 222 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.630 seconds
+Domain Reload Profiling: 1376ms
+	BeginReloadAssembly (238ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (74ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (299ms)
+		LoadAssemblies (236ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (296ms)
+			TypeCache.Refresh (294ms)
+				TypeCache.ScanAssembly (270ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (630ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (548ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (394ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.628 seconds
+Refreshing native plugins compatible for Editor in 2.68 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.989 seconds
+Domain Reload Profiling: 1615ms
+	BeginReloadAssembly (138ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (403ms)
+		LoadAssemblies (296ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (189ms)
+			TypeCache.Refresh (169ms)
+				TypeCache.ScanAssembly (152ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (990ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (826ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (678ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.17 seconds
+Refreshing native plugins compatible for Editor in 3.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3331 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (58.1 KB). Loaded Objects now: 3800.
+Memory consumption went from 206.6 MB to 206.5 MB.
+Total: 3.777000 ms (FindLiveObjects: 0.331900 ms CreateObjectMapping: 0.421500 ms MarkObjects: 2.850300 ms  DeleteObjects: 0.172400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 13834.991096 seconds.
+  path: Assets/Assets/Laboratory/Prefabs/Furniture/Desk/Desk01.prefab
+  artifactKey: Guid(fc7041c9f2340754b8928e5cf5d751e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Prefabs/Furniture/Desk/Desk01.prefab using Guid(fc7041c9f2340754b8928e5cf5d751e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e6d4d2cb6cea12c2245ec330869c78') in 0.298610 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 4.192817 seconds.
+  path: Assets/Assets/DIY/AFM.fbx
+  artifactKey: Guid(302444053b376c647a89bf5bc8a40fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/DIY/AFM.fbx using Guid(302444053b376c647a89bf5bc8a40fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2472d9aae016084f842fd365f40f1e39') in 0.839600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 169
+========================================================================
+Received Import Request.
+  Time since last request: 25.462877 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-4_comp_light.exr
+  artifactKey: Guid(80773453471ddcd48aefb23433acfe20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-4_comp_light.exr using Guid(80773453471ddcd48aefb23433acfe20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef4e93dc56b1abef912f526e5ab07d9c') in 0.237257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.008704 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-5_comp_light.exr
+  artifactKey: Guid(a2784b3c5fa0d5e44b99c09f300a4cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-5_comp_light.exr using Guid(a2784b3c5fa0d5e44b99c09f300a4cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4b9b7c09dda27a98ae4763fb4397b7') in 0.261685 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-6_comp_shadowmask.png
+  artifactKey: Guid(6c9b2e68d7c55a64a8432c38537a10bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-6_comp_shadowmask.png using Guid(6c9b2e68d7c55a64a8432c38537a10bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dba36a66736f28de737b8e3f7d01e97') in 0.656976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.017954 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-8_comp_dir.png
+  artifactKey: Guid(0006fd961ddf1ae448d641167bffe115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-8_comp_dir.png using Guid(0006fd961ddf1ae448d641167bffe115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d52d6864cdf26907b81b790da8c30d5') in 0.150874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.055407 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-9_comp_dir.png
+  artifactKey: Guid(32c6896939e3e43498870544ba7d95f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-9_comp_dir.png using Guid(32c6896939e3e43498870544ba7d95f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6587583ea8cc0bfeb9a351702c645a4') in 0.292873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.006043 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-10_comp_dir.png
+  artifactKey: Guid(d24f14963e4da4844be69eb16b314d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-10_comp_dir.png using Guid(d24f14963e4da4844be69eb16b314d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3157eb772789dadf6d754d52541185cc') in 0.074402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 8.603758 seconds.
+  path: Assets/Assets/Gas Cylinders Pack 1/scene/scene/Lightmap-0_comp_dir.png
+  artifactKey: Guid(52f7468a20785a146b73e92a44b38891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Gas Cylinders Pack 1/scene/scene/Lightmap-0_comp_dir.png using Guid(52f7468a20785a146b73e92a44b38891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32e6efff395b90473fdddb3bc1bc605b') in 0.135896 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.007242 seconds.
+  path: Assets/Assets/Gas Cylinders Pack 1/scene/scene/Lightmap-0_comp_light.exr
+  artifactKey: Guid(b3777e29e98072544a0aa30427153cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Gas Cylinders Pack 1/scene/scene/Lightmap-0_comp_light.exr using Guid(b3777e29e98072544a0aa30427153cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06a582c66098495de1e3b0a586bcdc2') in 0.054780 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-1_comp_dir.png
+  artifactKey: Guid(97c7e1f520d5c3b4ca83c48c9a967b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-1_comp_dir.png using Guid(97c7e1f520d5c3b4ca83c48c9a967b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ecf0874142c00edd5e8ac7cb56bda4') in 0.230019 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-0_comp_shadowmask.png
+  artifactKey: Guid(1982eb62fdbd97547bc42007b93fb186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-0_comp_shadowmask.png using Guid(1982eb62fdbd97547bc42007b93fb186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1528bd609ea4efdc9e22c3fce4f35bc') in 0.419426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-3_comp_light.exr
+  artifactKey: Guid(6e6d234a83a1a954e89fe69872465faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-3_comp_light.exr using Guid(6e6d234a83a1a954e89fe69872465faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d6bd9ad11ab470873a7098919866fb') in 0.544165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-4_comp_dir.png
+  artifactKey: Guid(be88843c290f42f419d2f8baa7b862a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Scenes/Scene_Laboratory/Scene_Laboratory/Lightmap-4_comp_dir.png using Guid(be88843c290f42f419d2f8baa7b862a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ca4d7333014f05a1e710214a379725') in 0.187872 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.173625 seconds.
+  path: Assets/Assets/DIY/Ingotcutter.fbx
+  artifactKey: Guid(6093fa154636e504c820ec44692889c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/DIY/Ingotcutter.fbx using Guid(6093fa154636e504c820ec44692889c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77f06fe00c054556a426f9fd23ce768f') in 0.541063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 71
+========================================================================
+Received Import Request.
+  Time since last request: 41.242849 seconds.
+  path: Assets/Assets/Laboratory/Models/Props/Organic/Alien01/Materials/Alien01_MaskMap.png
+  artifactKey: Guid(480d0e2033dc726448a0dbb5f3ad4860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Models/Props/Organic/Alien01/Materials/Alien01_MaskMap.png using Guid(480d0e2033dc726448a0dbb5f3ad4860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34abe607774f492d552b2176e226e0db') in 0.057460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.010184 seconds.
+  path: Assets/Assets/Laboratory/Models/Props/Organic/Alien02/Materials/Alien02_MaskMap.png
+  artifactKey: Guid(d430e92b7ce931646961c3c2a95d1b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Models/Props/Organic/Alien02/Materials/Alien02_MaskMap.png using Guid(d430e92b7ce931646961c3c2a95d1b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8790a480b445c4d8ec5e2b50ed06214') in 0.153432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.338871 seconds.
+  path: Assets/Assets/Laboratory/Models/Props/Hardware/Keyboard01/Materials/Keyboard01.mat
+  artifactKey: Guid(622831195f2d2044b82b849d66e47360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Models/Props/Hardware/Keyboard01/Materials/Keyboard01.mat using Guid(622831195f2d2044b82b849d66e47360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d465f0101792a0c73541aca8f4c810') in 0.148887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 42.019283 seconds.
+  path: Assets/Assets/Laboratory/Models/Props/Hardware/Mouse01/Materials/Mouse01.mat
+  artifactKey: Guid(8270ed73e4f4ed140b94de845bb9d8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Models/Props/Hardware/Mouse01/Materials/Mouse01.mat using Guid(8270ed73e4f4ed140b94de845bb9d8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38259c54257b79094b3404392cc8a08') in 0.052592 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 449.771659 seconds.
+  path: Assets/ChemLabEquipment/Prefabs/Gasgun.blend
+  artifactKey: Guid(ce8f10d1e9b6c6c40a4233dad7522d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ChemLabEquipment/Prefabs/Gasgun.blend using Guid(ce8f10d1e9b6c6c40a4233dad7522d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be5233f70b4fb2c8987ba9f0f3a51e2') in 0.381903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 125
+========================================================================
+Received Import Request.
+  Time since last request: 207.336146 seconds.
+  path: Assets/Assets/Laboratory/Prefabs/Props/Hardware/UltraSonicCleaner01.prefab
+  artifactKey: Guid(57aa1a34512231848aa407fe559c56be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Prefabs/Props/Hardware/UltraSonicCleaner01.prefab using Guid(57aa1a34512231848aa407fe559c56be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b96a73b433035e39d66c95842ac195') in 0.177334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 477.381174 seconds.
+  path: Assets/ChemLabEquipment/Fonts/DigitalBold.ttf
+  artifactKey: Guid(1beb2566af3b7814b8cc81f67ce0d4ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ChemLabEquipment/Fonts/DigitalBold.ttf using Guid(1beb2566af3b7814b8cc81f67ce0d4ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38c166bee8d7c3b9fa8f2d09639db38') in 0.105116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 4.781977 seconds.
+  path: Assets/Assets/Laboratory/Prefabs/Furniture/GloveBox/GloveBox.prefab
+  artifactKey: Guid(2097256a78c1f244d8e3c1f092206417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Prefabs/Furniture/GloveBox/GloveBox.prefab using Guid(2097256a78c1f244d8e3c1f092206417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bab3138f632ee42ac7617bb93fa8ae7') in 0.428033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Laboratory/Prefabs/Furniture/Vivarium/VivariumBox01.prefab
+  artifactKey: Guid(1477328f1455cd047a2a484348b10783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Laboratory/Prefabs/Furniture/Vivarium/VivariumBox01.prefab using Guid(1477328f1455cd047a2a484348b10783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6c5d7e556e88cec9902bd39ed7cb4cb') in 0.159021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
