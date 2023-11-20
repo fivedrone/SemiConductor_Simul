@@ -28,11 +28,11 @@ public class Equipment : MonoBehaviour, IInteractable
         {
             return;
         }
+        Debug.Log(pStage.ToString() + " " + pLevel.ToString());
+        Debug.Log(stage.ToString() + " " + level.ToString());
         if (stage != pStage || level != pLevel)
         {
-            // Debug.Log(pStage.ToString() + " " + pLevel.ToString());
-            // Debug.Log(stage.ToString() + " " + level.ToString());
-            // Debug.Log("Equipment Error");
+            Debug.Log("Equipment Error");
             UIManager.GetError("지금 해야 할 작업이 아닙니다.");
             return;
         }

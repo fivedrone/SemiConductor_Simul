@@ -11,12 +11,10 @@ public class Quest_Manager : MonoBehaviour
     private UI_Manager _uiManager;
     private MarkerManager _markerManager;
     public Text Stage_UI;
-    private Text prevLevel_UI; // 여유 되면 구현
-    private Text currentLevel_UI;
-    private Text nextLevel_UI; // 여유 되면 구현
+    public Text Level_UI;
     private GameObject Player;
-    private int prevStage = 0;
-    private int prevLevel = 0;
+    public int prevStage = 0;
+    public int prevLevel = 0;
     public int Stage { get; set; } = 0; // 공정 단계 구분. Stage가 바뀔 때 Level은 자동으로 1로 설정하기.
     public int Level { get; set; } = 0; // 공정 단계 중 소단계 구분. StageText가 index0인거 기억하기. Level이 바뀔때는 그냥 Level+1하기
     public QuestState questState;
@@ -27,9 +25,6 @@ public class Quest_Manager : MonoBehaviour
     {
         _uiManager = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         _markerManager = GameObject.Find("Marker_Manager").GetComponent<MarkerManager>();
-        prevLevel_UI = Stage_UI.GetComponentsInChildren<Text>()[0];
-        currentLevel_UI = Stage_UI.GetComponentsInChildren<Text>()[1];
-        nextLevel_UI = Stage_UI.GetComponentsInChildren<Text>()[2];
         Stage = PlayerPrefs.GetInt("Stage");
         Level = PlayerPrefs.GetInt("Level");
         UpdateQuestUI();
@@ -47,6 +42,8 @@ public class Quest_Manager : MonoBehaviour
         {
             if (QuestArr[Stage].stageArr[Level] == null)
             {
+                Debug.Log("P " + prevStage.ToString() + " " + prevLevel.ToString());
+                Debug.Log("C " + Stage.ToString() + " " + Level.ToString());
                 Stage += 1;
                 Level = 0;
             }
@@ -65,7 +62,7 @@ public class Quest_Manager : MonoBehaviour
     void UpdateQuestUI()
     {
         Stage_UI.text = QuestArr[Stage].name;
-        currentLevel_UI.text = QuestArr[Stage].stageArr[Level].name;
+        Level_UI.text = QuestArr[Stage].stageArr[Level].name;
         questState = QuestArr[Stage].stageArr[Level]._questState;
         // MarkQuestLocation();
         //  마지막에 여유 되면 prev next도 구현

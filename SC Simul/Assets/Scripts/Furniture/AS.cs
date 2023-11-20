@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class AS : MonoBehaviour
 {
-    // private AudioSource washPlace;
-    // public AudioClip washSound;
+    private AudioSource washPlace;
+    public AudioClip washSound;
     
     // Start is called before the first frame update
     void Start()
     {
-        // washPlace = gameObject.GetComponent<AudioSource>();
-        // washPlace.clip = washSound;
+        washPlace = gameObject.GetComponent<AudioSource>();
+        washPlace.clip = washSound;
     }
 
-    // public AudioSource GetWashPlace()
-    // {
-    //     return washPlace;
-    // }
+    public AudioSource GetWashPlace()
+    {
+        return washPlace;
+    }
 }
