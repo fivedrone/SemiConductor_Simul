@@ -28,8 +28,6 @@ public class Item : ScriptableObject, IInteractable
             if (Stage == _questManager.Stage && Level == _questManager.Level) _questManager.Level += 1;
             Destroy(this);
         }
-        
-        
     }
 
     public string InteractText()

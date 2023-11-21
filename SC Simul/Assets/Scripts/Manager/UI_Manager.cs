@@ -2,16 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
     public Text ErrorText;
+    private GameObject UI_Option;
 
     private void Start()
     {
-        ErrorText.gameObject.SetActive(false);
+        if(ErrorText!=null) ErrorText.gameObject.SetActive(false);
+        UI_Option = GameObject.Find("UI_Option");
+        if (UI_Option != null) UI_Option.gameObject.SetActive(false);
     }
 
     public void Button_FromBeginning()
@@ -29,15 +33,17 @@ public class UI_Manager : MonoBehaviour
     public void Button_FromChapter()
     {
         // 대충 어느 시점부터 게임 시작할건지 결정하게 하기
+        // PlayerPrefs.SetInt를 통해 stage와 level을 설정하고, 게임 씬에서 플레이어가 어디에 스폰될지 stage와 level을 통해 정하게 만들기
         // 구현 쉬움
     }
     public void Button_Option()
     {
-        // 옵션 UI 여는 버튼
+        UI_Option.gameObject.SetActive(true);
     }
     public void Button_Close()
     {
-        // 이 버튼이 위치한 empty 오브젝트를 찾고 그것을 비활성화하는 버튼
+        GameObject clickObject = EventSystem.current.currentSelectedGameObject;
+        clickObject.transform.parent.parent.gameObject.SetActive(false);
     }
     public void Button_Exit()
     {

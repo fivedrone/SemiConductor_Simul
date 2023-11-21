@@ -24,7 +24,6 @@ public class AS_Switch : MonoBehaviour, IInteractable
         Debug.Log("AS 재생 종료, 문 잠금 해제.");
         Door1.OpenLock();
         Door2.OpenLock();
-        isAct = false;
     }
     
     private void Awake()
@@ -40,19 +39,25 @@ public class AS_Switch : MonoBehaviour, IInteractable
 
     public void Interact(int stage, int level)
     {
-        if (isAct) return;
-        isAct = true;
-        Door1.Close();
-        Door1.SetLock();
-        Door2.SetLock();
-    
-        foreach (AS air in arr_AS)
+        if (isAct)
         {
-            air.GetWashPlace().Play();
-            Debug.Log("AS 작동");
+            Debug.Log("isAct true");
         }
+        else
+        {
+            isAct = true;
+            Door1.Close();
+            Door1.SetLock();
+            Door2.SetLock();
     
-        StartCoroutine(WaitForIt());
+            foreach (AS air in arr_AS)
+            {
+                air.GetWashPlace().Play();
+                Debug.Log("AS 작동");
+            }
+    
+            StartCoroutine(WaitForIt());
+        }
     }
 
     public string InteractText()
