@@ -371,7 +371,6 @@
 "Assets/Scripts/Furniture/AS.cs"
 "Assets/Scripts/Furniture/AS_Switch.cs"
 "Assets/Scripts/Furniture/Door.cs"
-"Assets/Scripts/Furniture/Location.cs"
 "Assets/Scripts/Furniture/LocationCheck.cs"
 "Assets/Scripts/Interface/Interface_Interact.cs"
 "Assets/Scripts/Manager/GameManager.cs"

@@ -38,10 +38,11 @@ public class AS_Switch : MonoBehaviour, IInteractable
     }
 
 
-    public void Interact(int stage, int level, QuestState _questState)
+    public void Interact(int stage, int level)
     {
         if (isAct) return;
         isAct = true;
+        Door1.Close();
         Door1.SetLock();
         Door2.SetLock();
     

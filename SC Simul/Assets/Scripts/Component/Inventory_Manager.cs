@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Inventory_Manager : MonoBehaviour
 {
-    public Item[] itemArr = new Item[2];
+    public Item[] itemArr = new Item[3];
     private Quest_Manager _questManager;
 
     private void Awake()

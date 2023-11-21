@@ -48,7 +48,7 @@ public class ObjectFinder : MonoBehaviour
         {
             // Debug.Log(_questManager.Stage);
             // Debug.Log(_questManager.Level);
-            interactable.Interact(_questManager.Stage, _questManager.Level, _questManager.questState);
+            interactable.Interact(_questManager.Stage, _questManager.Level);
         }
     }
 }

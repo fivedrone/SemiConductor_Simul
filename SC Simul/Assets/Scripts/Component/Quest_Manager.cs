@@ -18,6 +18,7 @@ public class Quest_Manager : MonoBehaviour
     public int Stage { get; set; } = 0; // 공정 단계 구분. Stage가 바뀔 때 Level은 자동으로 1로 설정하기.
     public int Level { get; set; } = 0; // 공정 단계 중 소단계 구분. StageText가 index0인거 기억하기. Level이 바뀔때는 그냥 Level+1하기
     public QuestState questState;
+    public GameObject _markerInstance;
 
     
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class Quest_Manager : MonoBehaviour
         Stage = PlayerPrefs.GetInt("Stage");
         Level = PlayerPrefs.GetInt("Level");
         UpdateQuestUI();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public bool IsQuestLocation(GameObject locCheck)
@@ -38,9 +40,10 @@ public class Quest_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Stage != prevStage || Level != prevLevel)
         {
-            if (QuestArr[Stage].stageArr[Level] == null)
+            if (QuestArr[Stage].stageArr[Level].name.Equals("Finish"))
             {
                 Debug.Log("P " + prevStage.ToString() + " " + prevLevel.ToString());
                 Debug.Log("C " + Stage.ToString() + " " + Level.ToString());
@@ -52,6 +55,7 @@ public class Quest_Manager : MonoBehaviour
             UpdateQuestUI();
         }
 
+        _markerInstance.transform.LookAt(QuestArr[Stage].stageArr[Level].questObject.transform.position);
         // if (_markerManager._markerInstance != null)
         // {
         //     _markerManager.UpdateMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
@@ -65,14 +69,13 @@ public class Quest_Manager : MonoBehaviour
         Level_UI.text = QuestArr[Stage].stageArr[Level].name;
         questState = QuestArr[Stage].stageArr[Level]._questState;
         // MarkQuestLocation();
-        //  마지막에 여유 되면 prev next도 구현
     }
     
-    void MarkQuestLocation()
-    {
-        // _markerManager.DestroyMarker();
-        // _markerManager.MakeMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
-    }
+    // void MarkQuestLocation()
+    // {
+    //     _markerManager.DestroyMarker();
+    //     _markerManager.MakeMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
+    // }
 }
 
 [System.Serializable]

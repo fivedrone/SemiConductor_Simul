@@ -996,4 +996,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: EquipFinished
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 0cea1fe21879098469374f77caf22121, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 11.2
+    functionName: NextQuest
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 0cea1fe21879098469374f77caf22121, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

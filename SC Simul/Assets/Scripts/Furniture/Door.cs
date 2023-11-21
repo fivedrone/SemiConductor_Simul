@@ -40,13 +40,11 @@ public class Door : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact(int stage, int level, QuestState questState)
+    public void Interact(int stage, int level)
     {
         if (IsLock)
         {
             UIManager.GetError("감압을 먼저 해주세요.");
-            // doorSound.clip = soundArr[2];
-            // doorSound.Play();
             return;
         }
         if (!IsDoorOpen)

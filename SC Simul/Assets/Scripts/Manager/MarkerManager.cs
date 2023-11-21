@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MarkerManager : MonoBehaviour
 {
-    // 버그 발생... 나중에 건드릴것.
-    // public GameObject markerPrefab; //마커는 화살표. 화살표로 목표 지점 가리키기. 퀘스트 매니저가 마커를 생성하고 삭제할 것.
+    public GameObject markerPrefab; //마커는 화살표. 화살표로 목표 지점 가리키기. 퀘스트 매니저가 마커를 생성하고 삭제할 것.
     // public GameObject _markerInstance;
-    // public GameObject Player;
-    //
+    public GameObject Player;
+    
     // public void MakeMarker(Vector3 targetPosition)
     // {
     //     Debug.Log("MakeMarker");
@@ -35,7 +34,9 @@ public class MarkerManager : MonoBehaviour
     //     {
     //         Debug.DrawRay(Player.transform.position, (targetPosition - Player.transform.position) * hit.distance, Color.red, 5.0f);
     //         _markerInstance.transform.position = hit.collider.transform.position;
+    //         _markerInstance.transform.rotation = Quaternion.LookRotation(targetPosition - Player.transform.position);
     //         Debug.Log(hit.collider.transform.position);
     //     }
     // }
+    
 }
