@@ -55,12 +55,7 @@ public class Quest_Manager : MonoBehaviour
             UpdateQuestUI();
         }
 
-        _markerInstance.transform.LookAt(QuestArr[Stage].stageArr[Level].questObject.transform.position);
-        // if (_markerManager._markerInstance != null)
-        // {
-        //     _markerManager.UpdateMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
-        //     Debug.Log("MarkerUpdate");
-        // }
+        if(QuestArr[Stage].stageArr[Level].questObject.transform.position != null) _markerInstance.transform.LookAt(QuestArr[Stage].stageArr[Level].questObject.transform.position);
     }
     
     void UpdateQuestUI()
@@ -68,14 +63,7 @@ public class Quest_Manager : MonoBehaviour
         Stage_UI.text = QuestArr[Stage].name;
         Level_UI.text = QuestArr[Stage].stageArr[Level].name;
         questState = QuestArr[Stage].stageArr[Level]._questState;
-        // MarkQuestLocation();
     }
-    
-    // void MarkQuestLocation()
-    // {
-    //     _markerManager.DestroyMarker();
-    //     _markerManager.MakeMarker(QuestArr[Stage].stageArr[Level].questObject.transform.position);
-    // }
 }
 
 [System.Serializable]
