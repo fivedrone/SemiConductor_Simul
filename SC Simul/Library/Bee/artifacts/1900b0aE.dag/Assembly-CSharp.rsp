@@ -373,6 +373,7 @@
 "Assets/Scripts/Furniture/Door.cs"
 "Assets/Scripts/Furniture/LocationCheck.cs"
 "Assets/Scripts/Interface/Interface_Interact.cs"
+"Assets/Scripts/Manager/AudioManager.cs"
 "Assets/Scripts/Manager/GameManager.cs"
 "Assets/Scripts/Manager/MarkerManager.cs"
 "Assets/Scripts/Manager/UI_Manager.cs"

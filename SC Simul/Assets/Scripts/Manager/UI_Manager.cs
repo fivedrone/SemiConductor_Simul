@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Slider = UnityEngine.UIElements.Slider;
 
 public class UI_Manager : MonoBehaviour
 {
     public Text ErrorText;
     private GameObject UI_Option;
+    private AudioMixer _audioMixer;
+    public Slider slider;
 
     private void Start()
     {
