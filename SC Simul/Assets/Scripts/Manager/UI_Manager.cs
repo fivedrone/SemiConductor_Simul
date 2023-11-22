@@ -46,6 +46,7 @@ public class UI_Manager : MonoBehaviour
     }
     public void Button_Close()
     {
+        // 현재 close 버튼이 있는 창을 가져와서 setactive(false) 시키는 공용 x 버튼
         GameObject clickObject = EventSystem.current.currentSelectedGameObject;
         clickObject.transform.parent.parent.gameObject.SetActive(false);
     }
@@ -57,6 +58,7 @@ public class UI_Manager : MonoBehaviour
 
     public void GetError(string error)
     {
+        
         ErrorText.text = error;
         ErrorText.gameObject.SetActive(true);
 

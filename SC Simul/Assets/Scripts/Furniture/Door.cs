@@ -5,8 +5,8 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     private Animator doorAnim;
-    // private AudioSource doorSound;
-    // public AudioClip[] soundArr;
+    private AudioSource doorSound;
+    public AudioClip[] soundArr;
     private UI_Manager UIManager;
 
     private bool IsLock;
@@ -18,7 +18,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         UIManager = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         doorAnim = GetComponent<Animator>();
-        // doorSound = GetComponent<AudioSource>();
+        doorSound = GetComponent<AudioSource>();
     }
 
     public void SetLock()
@@ -67,8 +67,6 @@ public class Door : MonoBehaviour, IInteractable
         IsDoorOpen = !IsDoorOpen;
         inter_Text = "E를 눌러 닫기";
         doorAnim.SetBool("IsOpen", IsDoorOpen);
-        // doorSound.clip = soundArr[0];
-        // doorSound.Play();
         StartCoroutine(WaitClose());
     }
 
@@ -77,7 +75,24 @@ public class Door : MonoBehaviour, IInteractable
         IsDoorOpen = !IsDoorOpen;
         inter_Text = "E를 눌러 열기";
         doorAnim.SetBool("IsOpen", IsDoorOpen);
-        // doorSound.clip = soundArr[1];
-        // doorSound.Play();
+        
+    }
+
+    public void OpenSound()
+    {
+        if (soundArr != null)
+        {
+            doorSound.clip = soundArr[0];
+            doorSound.Play();            
+        }
+    }
+
+    public void CloseSound()
+    {
+        if (soundArr != null)
+        {
+            doorSound.clip = soundArr[1];
+            doorSound.Play();
+        }
     }
 }

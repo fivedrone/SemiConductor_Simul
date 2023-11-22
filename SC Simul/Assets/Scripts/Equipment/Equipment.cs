@@ -8,8 +8,8 @@ public class Equipment : MonoBehaviour, IInteractable
     private Animator equipAnim;
     public int stage;
     public int level;
-    // private AudioSource equipSound;
-    // public AudioClip[] soundArr;
+    private AudioSource equipSound;
+    public AudioClip[] soundArr;
     private UI_Manager UIManager;
     private bool isActivated = false;
     private Quest_Manager _questManager;
@@ -24,7 +24,7 @@ public class Equipment : MonoBehaviour, IInteractable
     {
         UIManager = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         equipAnim = gameObject.GetComponent<Animator>();
-        // equipSound = GetComponent<AudioSource>();
+        equipSound = GetComponent<AudioSource>();
         _questManager = GameObject.FindWithTag("Player").GetComponent<Quest_Manager>();
     }
     public void Interact(int pStage, int pLevel)
@@ -68,5 +68,22 @@ public class Equipment : MonoBehaviour, IInteractable
     {
         Debug.Log("Instatantiate");
         Instantiate(Prefab, position, Quaternion.Euler(rotation));
+    }
+
+    public void SoundPlay()
+    {
+        if (soundArr != null)
+        {
+            equipSound.clip = soundArr[0];
+            equipSound.Play();
+        }
+    }
+
+    public void SoundStop()
+    {
+        if (soundArr != null)
+        {
+            equipSound.Stop();
+        }
     }
 }
