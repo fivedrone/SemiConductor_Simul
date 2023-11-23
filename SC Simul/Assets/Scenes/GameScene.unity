@@ -24030,29 +24030,9 @@ MonoBehaviour:
       _questState: 0
   - name: "\uD3EC\uD1A0 \uACF5\uC815"
     stageArr:
-    - name: "PR \uCF54\uD305"
-      questObject: {fileID: 919132148773772336}
-      _questState: 1
-    - name: "Solvant \uC81C\uAC70"
-      questObject: {fileID: 0}
-      _questState: 1
     - name: "\uB178\uAD11"
       questObject: {fileID: 1735811104}
       _questState: 1
-    - name: "\uD604\uC0C1"
-      questObject: {fileID: 0}
-      _questState: 0
-    - name: Finish
-      questObject: {fileID: 0}
-      _questState: 0
-  - name: "\uC2DD\uAC01 \uACF5\uC815"
-    stageArr:
-    - name: "\uC2DD\uAC01"
-      questObject: {fileID: 2045816693}
-      _questState: 0
-    - name: Finish
-      questObject: {fileID: 0}
-      _questState: 0
   - name: "\uC99D\uCC29 & \uC774\uC628\uC8FC\uC785 \uACF5\uC815"
     stageArr:
     - name: "\uC99D\uCC29"
@@ -24063,7 +24043,7 @@ MonoBehaviour:
       _questState: 0
   - name: "\uC885\uB8CC"
     stageArr:
-    - name: "\uBCF4\uCDA9 \uC124\uBA85\uC740 \uD234\uD301 \uCC38"
+    - name: "\uCD94\uAC00 \uC124\uBA85 \uBBF8\uAD6C\uD604"
       questObject: {fileID: 0}
       _questState: 0
   Stage_UI: {fileID: 1723820998}
